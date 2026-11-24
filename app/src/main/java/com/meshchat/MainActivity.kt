@@ -115,7 +115,8 @@ class MainActivity : Activity(), MeshManager.Listener {
             p += Manifest.permission.BLUETOOTH_CONNECT
             p += Manifest.permission.BLUETOOTH_SCAN
         }
-        if (Build.VERSION.SDK_INT <= 31) p += Manifest.permission.ACCESS_FINE_LOCATION
+        p += Manifest.permission.ACCESS_FINE_LOCATION
+        p += Manifest.permission.ACCESS_COARSE_LOCATION
         if (Build.VERSION.SDK_INT >= 33) p += Manifest.permission.NEARBY_WIFI_DEVICES
         return p
     }
